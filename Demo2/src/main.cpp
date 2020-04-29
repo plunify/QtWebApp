@@ -42,7 +42,7 @@ QString searchConfigFile()
         {
             // found
             fileName=QDir(file.fileName()).canonicalPath();
-            qDebug("Using config file %s",qPrintable(fileName));
+            //qDebug("Using config file %s",qPrintable(fileName));
             return fileName;
         }
     }

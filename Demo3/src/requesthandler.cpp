@@ -16,7 +16,7 @@ RequestHandler::RequestHandler(QObject* parent)
 void RequestHandler::service(HttpRequest& request, HttpResponse& response)
 {
     QByteArray path=request.getPath();
-    qDebug("Conroller: path=%s",path.data());
+    //qDebug("Conroller: path=%s",path.data());
 
     // Set a response header
     response.setHeader("Content-Type", "text/html; charset=ISO-8859-1");
@@ -24,7 +24,7 @@ void RequestHandler::service(HttpRequest& request, HttpResponse& response)
     // Return a simple HTML document
     response.write("<html><body>Hello World</body></html>",true);
 
-    qDebug("Conroller: finished request");
+    //qDebug("Conroller: finished request");
 
     // Clear the log buffer
     if (logger)

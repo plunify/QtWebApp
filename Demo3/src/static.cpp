@@ -44,7 +44,7 @@ QString Static::getConfigDir() {
         if (file.exists()) {
             // found
             configDir=dir;
-            qDebug("Using config file %s",qPrintable(file.fileName()));
+            //qDebug("Using config file %s",qPrintable(file.fileName()));
             return configDir;
         }
     }

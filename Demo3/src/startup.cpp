@@ -49,7 +49,7 @@ QString searchConfigFile()
         {
             // found
             fileName=QDir(file.fileName()).canonicalPath();
-            qDebug("Using config file %s",qPrintable(fileName));
+            //qDebug("Using config file %s",qPrintable(fileName));
             return fileName;
         }
     }
@@ -80,7 +80,7 @@ void Startup::start()
     logger->installMsgHandler();
 
     // Configure and start the TCP listener
-    qDebug("ServiceHelper: Starting service");
+    //qDebug("ServiceHelper: Starting service");
     QSettings* listenerSettings=new QSettings(configFileName,QSettings::IniFormat,app);
     listenerSettings->beginGroup("listener");
     listener=new HttpListener(listenerSettings,new RequestHandler(app),app);
